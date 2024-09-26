@@ -1,0 +1,39 @@
+/* styles.css or in your component's CSS module */
+.shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .shimmer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.15));
+    animation: shimmer 2s infinite; /* Increase duration for a slower effect */
+  }
+  
+  @keyframes shimmer {
+    0% {
+      left: -100%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+  
+  .project-card {
+    background: white;
+    border: 1px solid #eaeaea;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    transition: transform 0.2s;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-0.5rem);
+  }
+  
